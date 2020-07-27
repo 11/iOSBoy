@@ -12,7 +12,7 @@ Projects like `gba4iOS` and `DolphiniOS` have gotten around this clause by not p
   1. You no longer can update your iOS without losing the jail-break
   2. You are more susceptible to downloading malicious unverified software
   3. You device is not considered under warranty while it is jail-broken
-  4. There are large gaps in new jail-break releases. There is no guarentee that a new version of iOS will get a jail-break
+  4. There is usually large time gap in-between new jail-break releases. There is no guarentee that a new version of iOS will get a jail-break
 
 While there are ways to install certain emulators without a jail-break, this leads to other issues that users need to consider. The main issue users face when installing emulators without a jail-break is Apple's app certificate expiration process.
 
