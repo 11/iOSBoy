@@ -1,0 +1,7 @@
+{
+  "name": "emus4iOS",
+  "short_name": "emus",
+  "state_url": ".",
+  "display": "standalone",
+  "description": "free, secure, high-quality, easy to download, offline emulators that do not void Apple's app store emulation policy."
+}

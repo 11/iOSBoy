@@ -1,15 +1,15 @@
 import { LitElement, html, } from 'lit-element';
 import Navigo from 'navigo';
 
-import "views/HomepageView";
-import "views/GameboyView";
+import "views/homepage-view";
+import "views/gameboy-view";
 
 
 class AppRoot extends LitElement {
   static get properties() {
     return {
-      route: { type: Object }
-    }
+      route: { type: Object },
+    };
   }
 
   constructor() {
@@ -18,7 +18,6 @@ class AppRoot extends LitElement {
     // TODO update router to detect property change -- put router in route/routes
     const router = new Navigo('/', true, '#!');
     router
-      .on('about', () => this.route=html`<about-view />`)
       .on('gameboy', () => this.route=html`<emu-gameboy />`)
       .on('*', () => this.route=html`<emu-homepage />`);
     router.resolve();

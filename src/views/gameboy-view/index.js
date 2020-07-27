@@ -89,7 +89,6 @@ class GameboyView extends LitElement {
     canvas.width = 160;
     canvas.height = 144;
 
-    debugger;
     rust.then(m => m.say_hello_from_rust())
       .catch(console.error);
   }
