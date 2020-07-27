@@ -1,7 +1,7 @@
 # emus4iOS
 
 ### Description
-The mission for the emus4iOS project is to create a free, Secure, high-quality, easy to download, offline emulators that do not void Apple's app store emulation policy.
+The mission for the emus4iOS project is to create free, secure, high-quality, easy to download, offline emulators that do not void Apple's app store emulation policy.
 
 ### Why Even Make This?
 If you are new to emulation on Apple's mobile hardware, Apple has a clause in their terms of use that speaks to why they don't allow emulators on the App Store
