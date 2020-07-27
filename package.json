@@ -1,0 +1,35 @@
+{
+  "name": "emus4ios",
+  "version": "0.0.1",
+  "description": "emulators for iOS",
+  "author": "Doug Rudolph",
+  "license": "ISC",
+  "main": "./src/index.js",
+  "scripts": {
+    "build": "webpack --mode=production",
+    "dev": "webpack-dev-server"
+  },
+  "dependencies": {
+    "@webcomponents/webcomponentsjs": "^2.4.0",
+    "lit-element": "^2.2.1",
+    "navigo": "^7.1.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^3.4.2",
+    "file-loader": "^5.0.2",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "polymer-cli": "^1.9.11",
+    "style-loader": "^1.1.3",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}
