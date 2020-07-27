@@ -6,7 +6,7 @@
   "license": "ISC",
   "main": "./src/index.js",
   "scripts": {
-    "build": "curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh | echo \"y\" && webpack --mode=production",
+    "build": "bash ./scripts/build.sh",
     "dev": "webpack-dev-server --port 8080 --open"
   },
   "dependencies": {
