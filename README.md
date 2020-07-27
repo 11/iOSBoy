@@ -24,7 +24,7 @@ Any app that isn't installed through the Apple App Store comes with what's known
 
 The main reason `emus4iOS` is safe is because the entire project runs in the browser. None of this code touches your device's hardware, leaving you free to run any potentially malcious game files without it affecting your device.
 
-To allow you to have a more app-like experience, `emus4iOS` is written to work like a native app that gets installed on your phone. To learn how to use emus4iOS like an app, check out the next section.
+To allow you to have a more app-like experience, `emus4iOS` is written to work like a native app, but without requiring you to install anything. By bookmarking the website on your device, the website will open and feel like an app you downloaded from the app store, while still having the benefits of a safe and easy to use emulator. To learn how to bookmark and use the app, checkout the section below.
 
 ### How to Add emus4iOS to My Device
 1. Grab your phone and go to https://www.emus4ios.app in the safari app
