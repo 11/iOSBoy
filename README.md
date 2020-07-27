@@ -1,25 +1,31 @@
 # emus4iOS
 
 ### Description
-The mission for the emus4iOS project is to create a free, high-quality, easy to download, offline emulator that does not void Apple's app store emulation policy.
+The mission for the emus4iOS project is to create a free, Secure, high-quality, easy to download, offline emulators that do not void Apple's app store emulation policy.
 
 ### Why Even Make This?
-If you are new to device emulation on Apple's mobile hardware, Apple has a clause in there terms of use that states that ""
+If you are new to emulation on Apple's mobile hardware, Apple has a clause in their terms of use that speaks to why they don't allow emulators on the App Store
 
-Projects like `gba4iOS` and `DolphiniOS` have gotten around this clause by not pushing their app to Apple's app store, but rather allowing users to directly download the app from the `gba4ios` website. If you are not looking to jailbreak your device, the main issue users face when using either app is Apple's app certificate expiration.
+> "emulators allow you to execute arbitrary code, so a maliciously-crafted game (in theory) could pose a security risk for the devices."
 
-Any app that isn't installed through the Apple App Store comes with what's known as an `app certificate`. This certificate is how Apple ensures that every app a user installs has been verified by a team of developers at Apple. Any unverified app that a user installs has an expiration date and will automaically be un-openable after exactly 1 week. While this is great for security, this ultimatly strong holds users into Apple's terms of service policies.
+Projects like `gba4iOS` and `DolphiniOS` have gotten around this clause by not pushing their app to Apple's app store, but rather allowing users to install the app after jail-breaking their device. While it is easy to install emulators after your device is jail-broken, the process of jail-breaking an iPhone is a large uphill battle. On top of this, there are many loses you are opting into when you do jail-break - just to list a few:
+  1. You no longer can update your iOS without losing the jail-break
+  2. You are more susceptible to downloading malicious unverified software
+  3. You device is not considered under warranty while it is jail-broken
+  4. There are large gaps in new jail-break releases. There is no guarentee that a new version of iOS will get a jail-break
 
-### How emus4iOS Works
-`emus4iOS` uses two up and coming technologies to get around Apple's `app certificate` policy - `Web Assembly` and `Progressive Web Apps`.
+While there are ways to install certain emulators without a jail-break, this leads to other issues that users need to consider. The main issue users face when installing emulators without a jail-break is Apple's app certificate expiration process.
 
-`Web Assembly` is a binary instruction format for a stack-based virtual machine. `Wasm` is designed as a portable compilation target for programming languages, enabling deployment on the web for client and server applications.
+Any app that isn't installed through the Apple App Store comes with what's known as an `app certificate`. This certificate is how Apple ensures that every app a user installs has been verified by a team of developers at Apple. Any unverified app that a user installs has an expiration date and will automaically be un-openable after exactly 1 week. While this is considered a _good_ security practice, this ultimatly strong holds users into Apple's terms of service policies - leaving you emulator-less ☹️
 
-`Progressive Web Apps` is a type of application software delivered through the web, built using common web technologies including HTML, CSS and JavaScript. It is intended to work on any platform that uses a standards-compliant browser.
+### How emus4iOS Works. How is it Safe?
+`emus4iOS` uses two up and coming technologies to get around Apple's `app certificate` policy and to ensure a secure runtime - `Web Assembly` and `Progressive Web Apps`. You can learn more about these technologies here: <a href="https://webassembly.org/"> web assembly </a> & <a href="https://web.dev/progressive-web-apps/"> progressive web apps </a>
 
-With both web assembly and progressive web apps, `emus4iOS` is able to feel like an installed offline emulator, while avoiding all the headaches that comes with other iOS emulation projects.
+The main reason `emus4iOS` is safe is because the entire project runs in the browser. None of this code touches your device's hardware, leaving you free to run any potentially malcious game files without it affecting your device.
 
-### How to Download
+To allow you to have a more app-like experience, `emus4iOS` is written to work like a native app that gets installed on your phone. To learn how to use emus4iOS like an app, check out the next section.
+
+### How to Add emus4iOS to My Device
 1. Grab your phone and go to https://www.emus4ios.app in the safari app
 2. Click the share icon, and scroll down to `add to homescreen` - this will add the website to your homescreen as if it were an app.
 3. Now open emus4iOS from your homescreen and enjoy
