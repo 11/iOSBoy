@@ -1,11 +1,15 @@
 # install rustup
 echo "- Installing rustup"
+echo "- Installing wasm-pack"
 echo "- Installing wasm32 target"
 echo "- Compiling & Building with webpack"
 echo "******************************************"
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh && echo "1"
 echo "✅ Installing rustup"
+
+curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+echo "✅ Installing wasm-pack"
 
 # setup rustup toolchain to have the wasm target
 rustup -y target add wasm32-unknown-unknown
