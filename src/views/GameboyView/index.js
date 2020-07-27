@@ -1,14 +1,14 @@
 import { LitElement, html, css } from 'lit-element'
 
+const rust = import('pkg/emus4iOS');
 
 const Wrapper = css`
-
   .wrapper {
     position: absolute;
     top: 0;
     left: 0;
-    margin: 0;
     padding: 0;
+    margin: 0;
 
     width: 100%;
     height: 100%;
@@ -19,7 +19,9 @@ const Wrapper = css`
 
 const Canvas = css`
   canvas {
+    border-radius: 5px;
     background-color: green;
+    width: 100%;
   }
 `;
 
@@ -66,6 +68,30 @@ class GameboyView extends LitElement {
 
   constructor() {
     super();
+
+    this.handleLoad = this.handleLoad.bind(this);
+  }
+
+  connectedCallback() {
+    super.connectedCallback();
+    window.addEventListener('load', this.handleLoad);
+  }
+
+  disconnectedCallback() {
+    super.disconnectedCallback();
+    window.removeEventListener('load', this.handleLoad);
+  }
+
+  handleLoad = () => {
+    // set canvas' resolution to the same as the original gameboy
+    // the original gameboy's resolution are 160 x 144 pixels
+    const canvas = this.shadowRoot.getElementById('gameboy-canvas');
+    canvas.width = 160;
+    canvas.height = 144;
+
+    debugger;
+    rust.then(m => m.say_hello_from_rust())
+      .catch(console.error);
   }
 
   render() {
