@@ -8,11 +8,11 @@ If you are new to emulation on Apple's mobile hardware, Apple has a clause in th
 
 > "emulators allow you to execute arbitrary code, so a maliciously-crafted game (in theory) could pose a security risk for the devices."
 
-Projects like `gba4iOS` and `DolphiniOS` have gotten around this clause by not pushing their app to Apple's app store, but rather allowing users to install the app after jail-breaking their device. While it is easy to install emulators after your device is jail-broken, the process of jail-breaking an iPhone is a large uphill battle. On top of this, there are many loses you are opting into when you do jail-break - just to list a few:
+Projects like `gba4iOS` and `DolphiniOS` have gotten around this clause by not pushing their app to Apple's app store, but rather allowing users to install the app after jail-breaking their device. While it is easy to install emulators after your device is jail-broken, the process of jail-breaking an iPhone is a large uphill battle. On top of this, there are many loses you are opting into when you do jail-break your device.
   1. You no longer can update your iOS without losing the jail-break
   2. You are more susceptible to downloading malicious unverified software
   3. You device is not considered under warranty while it is jail-broken
-  4. There is usually large time gap in-between new jail-break releases. There is no guarentee that a new version of iOS will get a jail-break
+  4. There is usually a large time gap between new jail-break releases. There is no guarentee that a new version of iOS will get a jail-break
 
 While there are ways to install certain emulators without a jail-break, this leads to other issues that users need to consider. The main issue users face when installing emulators without a jail-break is Apple's app certificate expiration process.
 
