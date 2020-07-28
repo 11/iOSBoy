@@ -1,5 +1,6 @@
 # install rustup
 echo "- Installing rustup"
+echo "- Configure rust environment"
 echo "- Installing wasm-pack"
 echo "- Installing wasm32 target"
 echo "- Compiling and building emu4iOS' emulators to wasm32 target"
@@ -8,6 +9,9 @@ echo "**********************************************************"
 
 curl https://sh.rustup.rs -sSf | sh -s -- -y
 echo "✅ Installing rustup"
+
+source $HOME/.cargo/env
+echo "✅ Configure rust environment"
 
 curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
 echo "✅ Installing wasm-pack"
