@@ -6,7 +6,7 @@ echo "- Compiling and building emu4iOS' emulators to wasm32 target"
 echo "- Compiling and building JS to webpack production target"
 echo "**********************************************************"
 
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh && echo "1"
+curl https://sh.rustup.rs -sSf | sh -s -- -y
 echo "✅ Installing rustup"
 
 curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
