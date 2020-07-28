@@ -65,7 +65,7 @@ module.exports = (env, args) => {
         filename: "./index.html"
       }),
       new WasmPackPlugin({
-        crateDirectory: path.resolve(__dirname, "."),
+        crateDirectory: isProduction ? path.resolve(__dirname, "crate") : path.resolve(__dirname, "."),
       }),
       new webpack.ProvidePlugin({
         TextDecoder: ['text-encoding', 'TextDecoder'],
