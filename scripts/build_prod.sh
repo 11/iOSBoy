@@ -18,9 +18,9 @@ echo "✅ Installing wasm-pack"
 
 rustup target add wasm32-unknown-unknown
 echo "✅ Installing wasm32 target"
-#
-# cargo build --target wasm32-unknown-unknown
-# echo "✅ Compiling and building emu4iOS' emulators to wasm32 target"
+
+cargo build --target wasm32-unknown-unknown
+echo "✅ Compiling and building emu4iOS' emulators to wasm32 target"
 #
 # webpack --mode=production
 # echo "✅ Compiling and building JS to webpack production target"
