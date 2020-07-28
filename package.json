@@ -6,8 +6,10 @@
   "license": "ISC",
   "main": "./src/index.js",
   "scripts": {
-    "build": "bash ./scripts/build.sh",
-    "dev": "webpack-dev-server --port 8080 --open"
+    "build_prod": "bash ./scripts/build_prod.sh",
+    "build_dev": "bash ./scripts/build_dev.sh",
+    "build": "bash ./scripts/build_dev.sh",
+    "dev": "bash ./scripts/build_dev.sh && webpack-dev-server --port 8080 --open"
   },
   "dependencies": {
     "@webcomponents/webcomponentsjs": "^2.4.0",
