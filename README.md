@@ -5,8 +5,8 @@ The mission for the emus4iOS project is to create free, secure, high-quality, ea
 
 ### Supported Emulators
 - [ ] Gameboy
-- [ ] Gameboy color
-- [ ] Gameboy advance
+- [ ] Gameboy Color
+- [ ] Gameboy Advance
 
 ### Why Even Make This?
 If you are new to emulation on Apple's mobile hardware, Apple has a clause in their terms of use that speaks to why they don't allow emulators on the App Store
