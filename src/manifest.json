@@ -1,9 +1,0 @@
-{
-  "name": "emus4iOS",
-  "short_name": "emus4iOS",
-  "description": "free, secure, high-quality, easy to download, offline emulators that do not void Apple's app store emulation policy.",
-  "start_url": "https://emus4iOS.app",
-  "lang": "English",
-  "orientation": "portrait-primary",
-  "display": "fullscreen"
-}

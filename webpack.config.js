@@ -1,6 +1,7 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const WasmPackPlugin = require('@wasm-tool/wasm-pack-plugin');
+const WebpackPwaManifest = require('webpack-pwa-manifest')
 const path = require('path');
 const webpack = require("webpack");
 
@@ -74,6 +75,15 @@ module.exports = (env, args) => {
       new MiniCssExtractPlugin({
         filename: "[name].css",
         chunkFilename: "[id].css"
+      }),
+      new WebpackPwaManifest({
+        name: "emus4iOS",
+        short_name: "emus4iOS",
+        description: "free, secure, high-quality, easy to download, offline emulators that do not void Apple's app store emulation policy.",
+        start_url: "https://emus4iOS.app",
+        lang: "English",
+        orientation: "portrait-primary",
+        display: "fullscreen",
       })
     ]
   }
