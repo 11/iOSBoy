@@ -16,9 +16,8 @@ echo "✅ Configure rust environment"
 curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
 echo "✅ Installing wasm-pack"
 
-ls
-# rustup target add wasm32-unknown-unknown
-# echo "✅ Installing wasm32 target"
+rustup target add wasm32-unknown-unknown
+echo "✅ Installing wasm32 target"
 #
 # cargo build --target wasm32-unknown-unknown
 # echo "✅ Compiling and building emu4iOS' emulators to wasm32 target"
