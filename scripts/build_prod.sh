@@ -1,4 +1,3 @@
-# install rustup
 echo "- Installing rustup"
 echo "- Configure rust environment"
 echo "- Installing wasm-pack"
