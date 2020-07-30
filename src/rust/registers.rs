@@ -25,7 +25,9 @@ impl Registers {
     };
   }
 
-  pub read(reg: &Register::Reg8) -> Reg8 { }
+  pub read_reg8(reg: &Register::Reg8) -> Reg8 { }
+
+  pub read_reg16(reg: &Register::Reg16) -> Reg16 { }
 
   pub read_af() -> Reg16 {}
 
