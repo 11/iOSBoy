@@ -34,13 +34,13 @@ impl Registers {
 
   pub read_reg8(reg: &Register::Reg8) -> Register::Reg8 { }
 
-  pub read_reg16(reg: &Register::Reg16) -> ResReg16 { }
+  pub read_reg16(reg: &Register::Reg16) -> Register::Reg16 { }
 
-  pub read_af() -> Reg16 {}
+  pub read_af() -> Register::Reg16 {}
 
-  pub read_cb() -> Reg16 {}
+  pub read_cb() -> Register::Reg16 {}
 
-  pub read_ed() -> Reg16 {}
+  pub read_ed() -> Register::Reg16 {}
 
-  pub read_lh() -> Reg16 {}
+  pub read_lh() -> Register::Reg16 {}
 }
