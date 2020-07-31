@@ -1,71 +1,7 @@
 import { LitElement, html, css } from 'lit-element'
-
 const rust = import('pkg/emus4iOS');
 
-const Wrapper = css`
-  .wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 0;
-    margin: 0;
-
-    width: 100%;
-    height: 100%;
-
-    background-color: #C4BFBA;
-  }
-`;
-
-const Canvas = css`
-  canvas {
-    border-radius: 5px;
-    background-color: green;
-    width: 100%;
-  }
-`;
-
-const ControllerContainer = css`
-  .controller-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-  }
-`;
-
-const ArrowPad = css`
-  .arrow-pad div {
-    border-radius: 100px;
-    background-color: #A12C5E;
-    width: 25px;
-    height: 25px;
-  }
-`;
-
-const ControllerButtons = css`
-  .controller-buttons div {
-    border-radius: 100px;
-    background-color: #A12C5E;
-    width: 25px;
-    height: 25px;
-    padding-right: 2px;
-  }
-`;
-
-
 class GameboyView extends LitElement {
-  static get styles() {
-    return [
-      Wrapper,
-      Canvas,
-      ControllerContainer,
-      ControllerButtons,
-      ArrowPad,
-    ];
-  }
-
   constructor() {
     super();
 
@@ -88,13 +24,12 @@ class GameboyView extends LitElement {
     const canvas = this.shadowRoot.getElementById('gameboy-canvas');
     canvas.width = 160;
     canvas.height = 144;
-
-    rust.then(m => m.say_hello_from_rust())
-      .catch(console.error);
   }
 
   render() {
     return html`
+      <link rel="stylesheet" href="./style.css">
+
       <div class="wrapper">
         <canvas id="gameboy-canvas"></canvas>
         <div class="controller-container">
@@ -120,4 +55,4 @@ class GameboyView extends LitElement {
   }
 }
 
-customElements.define('emu-gameboy', GameboyView);
+customElements.define('emu-view-gameboy', GameboyView);

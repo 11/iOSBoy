@@ -1,8 +1,8 @@
 import Navigo from 'navigo';
 import { html } from 'lit-element';
 
-import "views/homepage-view";
-import "views/gameboy-view";
+import "views/emu-view-homepage";
+import "views/emu-view-gameboy";
 
 export class Router {
   constructor() {
@@ -13,8 +13,8 @@ export class Router {
 
   _createRouteTable() {
     this.router
-      .on('gameboy', () => this.route=html`<emu-gameboy />`)
-      .on('*', () => this.route=html`<emu-homepage />`);
+      .on('gameboy', () => this.route=html`<emu-view-gameboy />`)
+      .on('*', () => this.route=html`<emu-view-homepage />`);
 
     this.router.resolve();
   }

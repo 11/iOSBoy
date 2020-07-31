@@ -4,7 +4,7 @@ pub enum Register {
 }
 
 pub struct Registers {
-  pub a: Register::Reg8,   // general memory registers
+  pub a: Register::Reg8,    // general memory registers
   pub b: Register::Reg8,
   pub c: Register::Reg8,
   pub d: Register::Reg8,
@@ -18,16 +18,23 @@ pub struct Registers {
 
 impl Registers {
   pub fn new() -> Self {
-    Registers { a: 0, b: 0, c: 0, d: 0, e: 0, h: 0, l: 0,
+    Registers {
+      a: 0,
+      b: 0,
+      c: 0,
+      d: 0,
+      e: 0,
+      h: 0,
+      l: 0,
       f: 0,
       sp: 0,
       pc: 0,
     };
   }
 
-  pub read_reg8(reg: &Register::Reg8) -> Reg8 { }
+  pub read_reg8(reg: &Register::Reg8) -> Register::Reg8 { }
 
-  pub read_reg16(reg: &Register::Reg16) -> Reg16 { }
+  pub read_reg16(reg: &Register::Reg16) -> ResReg16 { }
 
   pub read_af() -> Reg16 {}
 
