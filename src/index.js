@@ -9,7 +9,7 @@ class AppRoot extends LitElement {
   }
 
   render() {
-    return this.router.navigate('/');
+    return this.router.render();
   }
 }
 

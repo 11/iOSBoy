@@ -13,8 +13,6 @@ class RomInput extends LitElement {
 
   render() {
     return html`
-      <link rel="stylesheet" href="./style.css">
-
       <input
         type="file"
         id="rom-files"

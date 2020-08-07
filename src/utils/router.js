@@ -4,23 +4,30 @@ import { html } from 'lit-element';
 import "views/emu-view-homepage";
 import "views/emu-view-gameboy";
 
+
 export class Router {
   constructor() {
-    this.route = '/';
-    this.router = new Navigo(this.route, true, '#!');
-    this._createRouteTable();
+    this.view = null;
+    this.router = this._createRoutingTable();
   }
 
-  _createRouteTable() {
-    this.router
-      .on('gameboy', () => this.route=html`<emu-view-gameboy />`)
-      .on('*', () => this.route=html`<emu-view-homepage />`);
+  _createRoutingTable() {
+    let router = new Navigo('/', true, '#!');
+    router
+      .on('gameboy', () => this.view = html`<emu-view-gameboy />`)
+      .on('*', () => this.view = html`<emu-view-homepage />`);
+    router.resolve();
 
-    this.router.resolve();
+    return router;
   }
 
-  navigate(route='/') {
+  _navigate(route='/') {
     this.router.navigate(route);
-    return html`${this.route}`;
+    this.history.push(route);
+    return this.result;
+  }
+
+  render() {
+    return this.view;
   }
 }
