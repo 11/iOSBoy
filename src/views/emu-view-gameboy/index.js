@@ -1,23 +1,17 @@
 import { LitElement, html, css } from 'lit-element'
 import "components/emu-gb-screen";
 
-const rust = import('pkg/iOSBoy');
 
 
 class GameboyView extends LitElement {
   static get styles() {
     return css`
       .wrapper {
-        position: absolute;
-        top: 0;
-        left: 0;
         padding: 0;
         margin: 0;
-
         width: 100%;
         height: 100%;
-
-        background-color: #C4BFBA;
+        background-color: purple;
       }
 
       .controller-buttons div {

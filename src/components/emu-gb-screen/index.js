@@ -1,10 +1,11 @@
 import { LitElement, html, css } from 'lit-element';
+const rust = import('pkg/iOSBoy');
 
 
 class GameboyScreen extends LitElement {
   static get styles() {
     return css`
-      .panel{
+      .panel {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -16,7 +17,7 @@ class GameboyScreen extends LitElement {
       canvas {
         border-color: black;
         border-radius: 5px;
-        border-width: 3vh 4vw;
+        border-width: 4vh 3vw;
         border-style: solid;
 
         background-color: green;
@@ -29,26 +30,47 @@ class GameboyScreen extends LitElement {
   constructor() {
     super();
 
-    this.handleLoad = this.handleLoad.bind(this);
+    this.initializeScreen = this.initializeScreen.bind(this);
   }
 
 
   connectedCallback() {
     super.connectedCallback();
-    window.addEventListener('load', this.handleLoad);
+    window.addEventListener('load', this.initializeScreen);
   }
 
   disconnectedCallback() {
     super.disconnectedCallback();
-    window.removeEventListener('load', this.handleLoad);
+    window.removeEventListener('load', this.initializeScreen);
   }
 
-  handleLoad = () => {
-    // set canvas' resolution to the same as the original gameboy
-    // the original gameboy's resolution are 160 x 144 pixels
-    const canvas = this.shadowRoot.getElementById('gameboy-canvas');
-    canvas.width = 160;
-    canvas.height = 144;
+  initializeScreen = () => {
+    rust.then(m => {
+
+      // set up canvas width and height
+      const canvas = this.shadowRoot.getElementById('gameboy-canvas');
+      canvas.width = 160;
+      canvas.height = 144;
+
+      // set up FPS limit to the canvas
+      const FPS_THROTTLE = 1000.0/60.0;
+      let lastDrawTime = -1;
+
+      const client = new m.Client();
+
+      const render = () => {
+        window,requestAnimationFrame(render);
+
+        const currTime = Date.now();
+        if (currTime >= lastDrawTime + FPS_THROTTLE) {
+          lastDrawTime = currTime;
+
+          client.update();
+          client.render();
+        }
+      }
+      // render();
+    });
   }
 
   render() {
