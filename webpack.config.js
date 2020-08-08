@@ -77,10 +77,10 @@ module.exports = (env, args) => {
         chunkFilename: "[id].css"
       }),
       new WebpackPwaManifest({
-        name: "emus4iOS",
-        short_name: "emus4iOS",
+        name: "iOSBoy",
+        short_name: "iOSBoy",
         description: "free, secure, high-quality, easy to download, offline emulators that do not void Apple's app store emulation policy.",
-        start_url: "https://emus4iOS.app",
+        start_url: "https://iOSBoy.app",
         lang: "English",
         orientation: "portrait-primary",
         display: "fullscreen",

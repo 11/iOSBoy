@@ -1,7 +1,7 @@
 import { LitElement, html, css } from 'lit-element'
 import "components/emu-gb-screen";
 
-const rust = import('pkg/emus4iOS');
+const rust = import('pkg/iOSBoy');
 
 
 class GameboyView extends LitElement {

@@ -10,7 +10,7 @@ class Homepage extends LitElement {
 
   render() {
     return html`
-      <p> emus4iOS </p>
+      <p> iOSBoy </p>
       <emu-rom-input></emu-rom-input>
     `;
   }
