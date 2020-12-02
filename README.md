@@ -1,12 +1,11 @@
 # iOSBoy
 
 ### Description
-The mission for the iOSBoy project is to create free, secure, high-quality, easy to download, offline emulators that do not void Apple's app store emulation policy.
+The mission for the iOSBoy project is to create free, secure, easy to download, offline Gameboy and Gameboy Color emulators that do not void Apple's app store emulation policy.
 
-### Supported Emulators
+### Currently Supported Emulators
 - [ ] Gameboy
 - [ ] Gameboy Color
-- [ ] Gameboy Advance
 
 ### Why Even Make This?
 If you are new to emulation on Apple's mobile hardware, Apple has a clause in their terms of use that speaks to why they don't allow emulators on the App Store
