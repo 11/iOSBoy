@@ -1,11 +1,23 @@
 # iOSBoy
 
 ### Description
-The mission for the iOSBoy project is to create free, secure, easy to download, offline Gameboy and Gameboy Color emulators that do not void Apple's app store emulation policy.
+The mission for the iOSBoy project is to create a free, secure, easy to download, offline Gameboy and Gameboy Color emulators that do not void Apple's app store emulation policy.
 
 ### Currently Supported Emulators
 - [ ] Gameboy
 - [ ] Gameboy Color
+
+### Path of Development
+1. Create a working Gameboy emulator without sound running on desktop
+2. Create a working Web build of the original emulator with styled buttons on a webpage
+2. Add sound and fine-tune the emulator timing
+3. Getting Pokemon Red/Blue & Silver/Gold/Crystal running
+4. Reverse engineer symlinking and allow users to trade pokemon over a network
+
+### Resources
+1. <a href="https://gbdev.io/pandocs/#video-display">pandocs</a>
+2. <a href="https://gekkio.fi/files/gb-docs/gbctr.pdf">Gameboy: Complete Technical Reference</a>
+2. <a href="https://github.com/Baekalfen/PyBoy/blob/master/PyBoy.pdf">PyBoy documentation manual</a>
 
 ### Why Even Make This?
 If you are new to emulation on Apple's mobile hardware, Apple has a clause in their terms of use that speaks to why they don't allow emulators on the App Store
