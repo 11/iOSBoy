@@ -10,7 +10,7 @@ module.exports = (env, args) => {
   const isProduction = (args.mode === 'production');
 
   return {
-    entry: './src/index.js',
+    entry: './src/web/index.js',
     output: {
       path: path.resolve(__dirname, 'dist'),
       filename: isProduction ? '[name].[contenthash].js' : '[name].[hash].js',
@@ -18,13 +18,13 @@ module.exports = (env, args) => {
     resolve: {
       alias: {
         pkg: path.resolve(__dirname, './pkg/'),
-        components: path.resolve(__dirname, './src/components/'),
-        router: path.resolve(__dirname, './src/routes/'),
-        rust: path.resolve(__dirname, './src/rust/'),
-        style: path.resolve(__dirname, './src/styles/'),
-        svgs: path.resolve(__dirname, './src/svgs/'),
-        utils: path.resolve(__dirname, './src/utils/'),
-        views: path.resolve(__dirname, './src/views/')
+        components: path.resolve(__dirname, './src/web/components/'),
+        router: path.resolve(__dirname, './src/web/routes/'),
+        rust: path.resolve(__dirname, './src/web/rust/'),
+        style: path.resolve(__dirname, './src/web/styles/'),
+        svgs: path.resolve(__dirname, './src/web/svgs/'),
+        utils: path.resolve(__dirname, './src/web/utils/'),
+        views: path.resolve(__dirname, './src/web/views/')
       }
     },
     module: {
