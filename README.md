@@ -1,4 +1,4 @@
-# iOSBoy - Activelty Under Development 
+# iOSBoy - Actively Under Development 
 
 ### Description
 The mission for the iOSBoy project is to create a free, secure, easy to download, offline Gameboy and Gameboy Color emulators that do not void Apple's app store emulation policy.
